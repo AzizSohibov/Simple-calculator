@@ -1,3 +1,3 @@
 # Simple-calculator
 Simple js calculator
-https://azizsohibov.github.io/Simple-calculator/
+https://azizsohibov.github.io/simple-calculator/
