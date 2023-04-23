@@ -50,11 +50,19 @@ for(let btn of btns) {
                 if (   btn.innerText === '='  ) {
                     for (letter of screenResult.innerText) {
                         if (  !((myNumbers + mySigns).includes(letter))  ) {
-                            throw Error;
-                        } else {
-                            screenResult.innerText = eval(screenResult.innerText);
+                            throw SyntaxError;
                         }
                     }
+
+                    let myResult = eval(screenResult.innerText);
+
+                    if (  (myResult || myResult === 0) && myResult !== Infinity && myResult !== -Infinity  ) {
+                        
+                        screenResult.innerText = eval(screenResult.innerText);
+                    } else {
+                        throw SyntaxError;
+                    }
+    
                 }
                 
 
