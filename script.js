@@ -56,8 +56,7 @@ for(let btn of btns) {
 
                     let myResult = eval(screenResult.innerText);
 
-                    if (  (myResult || myResult === 0) && myResult !== Infinity && myResult !== -Infinity  ) {
-                        
+                    if (  isFinite(myResult)  ) {
                         screenResult.innerText = eval(screenResult.innerText);
                     } else {
                         throw SyntaxError;
